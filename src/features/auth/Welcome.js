@@ -15,7 +15,13 @@ const Welcome = () => {
 				<Link to='/dash/notes'>Wyświetl zadania</Link>
 			</p>
 			<p>
+				<Link to='/dash/notes/new'>Dodaj nowe zadanie</Link>
+			</p>
+			<p>
 				<Link to='/dash/users'>Wyświetl użytkowników</Link>
+			</p>
+			<p>
+				<Link to='/dash/users/new'>Dodaj nowego użytkownika</Link>
 			</p>
 		</section>
 	);
