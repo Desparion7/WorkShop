@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { deploy } from '../../config/deploy';
 
 import { useDispatch } from 'react-redux';
 import { setCredentials } from './authSlice';
@@ -44,7 +43,7 @@ const Login = () => {
 			dispatch(setCredentials({ accessToken }));
 			setUsername('');
 			setPassword('');
-			navigate(`${deploy}/dash`);
+			navigate(`/dash`);
 		} catch (err) {
 			if (!err.status) {
 				setErrMsg('Brak odpowiedzi servera');
@@ -107,7 +106,7 @@ const Login = () => {
 				</form>
 			</main>
 			<footer>
-				<Link to={`/${deploy}`}>Strona główna</Link>
+				<Link to={`/`}>Strona główna</Link>
 			</footer>
 		</section>
 	);

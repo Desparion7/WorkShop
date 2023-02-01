@@ -25,6 +25,7 @@ const PersistLogin = () => {
 					//const response =
 					await refresh();
 					//const { accessToken } = response.data
+
 					setTrueSuccess(true);
 				} catch (err) {
 					console.error(err);
@@ -47,14 +48,14 @@ const PersistLogin = () => {
 	} else if (isLoading) {
 		//persist: yes, token: no
 		console.log('loading');
-		content = <p>Loading...</p>;
+		content = <p>Wczytywanie...</p>;
 	} else if (isError) {
 		//persist: yes, token: no
 		console.log('error');
 		content = (
 			<p className='errmsg'>
-				{error?.data?.message}
-				<Link to='/login'>Please login again</Link>.
+				{`${error?.data?.message} - `}
+				<Link to='/login'>Musisz się zalogować</Link>.
 			</p>
 		);
 	} else if (isSuccess && trueSuccess) {

@@ -3,8 +3,8 @@ import { useAddNewUserMutation } from './usersApiSlice';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
-import { ROLE } from '../../config/roles';
-import { deploy } from '../../config/deploy';
+import { ROLES } from '../../config/roles';
+
 
 const USER_REGEX = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]{3,20}$/;
 const PWD_REGEX = /^[A-z0-9!@#$%]{4,12}/;
@@ -33,7 +33,7 @@ export const NewUserForm = () => {
 			setUsername('');
 			setPassword('');
 			setRoles([]);
-			navigate(`${deploy}/dash/users`);
+			navigate(`/dash/users`);
 		}
 	}, [isSuccess, navigate]);
 
@@ -58,7 +58,7 @@ export const NewUserForm = () => {
 		}
 	};
 
-	const options = Object.values(ROLE).map((role) => {
+	const options = Object.values(ROLES).map((role) => {
 		return (
 			<option key={role} value={role}>
 				{role}

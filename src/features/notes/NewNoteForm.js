@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAddNewNoteMutation } from './notesApiSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
-import { deploy } from '../../config/deploy';
+
 
 const NewNoteForm = ({ users }) => {
 	const [addNewNote, { isLoading, isSuccess, isError, error }] =
@@ -20,7 +20,7 @@ const NewNoteForm = ({ users }) => {
 			setUser('');
 			setTitle('');
 			setText('');
-			navigate(`${deploy}/dash/notes`);
+			navigate(`/dash/notes`);
 		}
 	}, [isSuccess, navigate]);
 
