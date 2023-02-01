@@ -7,7 +7,7 @@ const Public = () => {
 		<section className='public'>
 			<header>
 				<h1>
-					CarWoś <span className='nowrap'>centrum zadań </span>
+					CarsWoś <span className='nowrap'>centrum zadań </span>
 				</h1>
 			</header>
 			<main className='public__main'>
@@ -17,16 +17,16 @@ const Public = () => {
 					gotowych naprawić twój samochód.
 				</p>
 				<address className='public__addr'>
-					CarWoś Jan Woś <br />
+					CarsWoś Jan Woś <br />
 					37-716 Orły <br />
 					ul. Lipowa 88 <br />
-					<a href='tel +777 777 777'>777 777 777</a>
+					<a href='tel +606 086 266'>606 086 266</a>
 					<br />
 					<p> Właściciel Jan Woś</p>
 				</address>
 			</main>
 			<footer>
-				<Link to='/login'>Logowanie dla pracowników</Link>
+				<Link to='/login'>Centrum logowania</Link>
 			</footer>
 		</section>
 	);
