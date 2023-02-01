@@ -104,7 +104,7 @@ const EditUserForm = ({ user }) => {
 				}}
 			>
 				<div className='form__title-row'>
-					<h2>Edytuj Użytkownika</h2>
+					<h2>Edytuj</h2>
 					<div className='form__action-buttons'>
 						<button
 							className='icon-button'
@@ -138,7 +138,7 @@ const EditUserForm = ({ user }) => {
 				<label className='form__label' htmlFor='password'>
 					Hasło:{' '}
 					<span className='nowrap'>
-						[4-12 znaków w tym jeden znak specjalny (!@#$%) ]
+						[4-12 znaków w tym znak specjalny]
 					</span>
 				</label>
 				<input

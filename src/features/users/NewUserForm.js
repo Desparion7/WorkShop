@@ -101,7 +101,7 @@ export const NewUserForm = () => {
 				<label className='form__label' htmlFor='password'>
 					Hasło:
 					<span className='nowrap'>
-						[4-12 znaków w tym jeden znak specjalny(!@#$%)]
+						[4-12 znaków w tym znak specjalny]
 					</span>
 				</label>
 				<input
