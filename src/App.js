@@ -20,34 +20,34 @@ function App() {
 	useTitle('CarsWoś')
 	return (
 		<Routes>
-			<Route path='/' element={<Layout />}>
+			<Route path='/WorkShop_frontend' element={<Layout />}>
 				{/* Public routes */}
 				<Route index element={<Public />} />
-				<Route path='login' element={<Login />} />
+				<Route path='/WorkShop_frontend/login' element={<Login />} />
 				{/* Protected routes */}
 				<Route element={<PersistLogin />}>
 					<Route
 						element={<RequireAuth allowedRoles={[...Object.values(ROLES)]} />}
 					>
 						<Route element={<Prefetch />}>
-							<Route path='dash' element={<DashLayout />}>
+							<Route path='/WorkShop_frontend/dash' element={<DashLayout />}>
 								<Route index element={<Welcome />} />
 								<Route
 									element={
 										<RequireAuth allowedRoles={[ROLES.Admin, ROLES.Manager]} />
 									}
 								>
-									<Route path='users'>
+									<Route path='/WorkShop_frontend/users'>
 										<Route index element={<UsersList />} />
-										<Route path=':id' element={<EditUser />} />
-										<Route path='new' element={<NewUserForm />} />
+										<Route path='/WorkShop_frontend/:id' element={<EditUser />} />
+										<Route path='/WorkShop_frontend/new' element={<NewUserForm />} />
 									</Route>
 								</Route>
 
-								<Route path='notes'>
+								<Route path='/WorkShop_frontend/notes'>
 									<Route index element={<NotesList />} />
-									<Route path=':id' element={<EditNote />} />
-									<Route path='new' element={<NewNote />} />
+									<Route path='/WorkShop_frontend/:id' element={<EditNote />} />
+									<Route path='WorkShop_frontend/new' element={<NewNote />} />
 								</Route>
 							</Route>{' '}
 						</Route>{' '}
