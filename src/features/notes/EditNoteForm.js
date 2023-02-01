@@ -48,7 +48,7 @@ const EditNoteForm = ({ note, users }) => {
 		await deleteNote({ id: note.id });
 	};
 
-	const created = new Date(note.createdAt).toLocaleString('en-US', {
+	const created = new Date(note.createdAt).toLocaleString('pl-PL', {
 		day: 'numeric',
 		month: 'long',
 		year: 'numeric',
@@ -56,7 +56,7 @@ const EditNoteForm = ({ note, users }) => {
 		minute: 'numeric',
 		second: 'numeric',
 	});
-	const updated = new Date(note.updatedAt).toLocaleString('en-US', {
+	const updated = new Date(note.updatedAt).toLocaleString('pl-PL', {
 		day: 'numeric',
 		month: 'long',
 		year: 'numeric',
@@ -112,7 +112,7 @@ const EditNoteForm = ({ note, users }) => {
 					</div>
 				</div>
 				<label className='form__label' htmlFor='note-title'>
-					Title:
+					Tytuł:
 				</label>
 				<input
 					className={`form__input ${validTitleClass}`}
@@ -125,7 +125,7 @@ const EditNoteForm = ({ note, users }) => {
 				/>
 
 				<label className='form__label' htmlFor='note-text'>
-					Text:
+					Zadanie:
 				</label>
 				<textarea
 					className={`form__input form__input--text ${validTextClass}`}
@@ -140,7 +140,7 @@ const EditNoteForm = ({ note, users }) => {
 							className='form__label form__checkbox-container'
 							htmlFor='note-completed'
 						>
-							WORK COMPLETE:
+							Zadanie wykonane:
 							<input
 								className='form__checkbox'
 								id='note-completed'
@@ -155,7 +155,7 @@ const EditNoteForm = ({ note, users }) => {
 							className='form__label form__checkbox-container'
 							htmlFor='note-username'
 						>
-							ASSIGNED TO:
+							Utworzone przez:
 						</label>
 						<select
 							id='note-username'
@@ -169,12 +169,12 @@ const EditNoteForm = ({ note, users }) => {
 					</div>
 					<div className='form__divider'>
 						<p className='form__created'>
-							Created:
+							Data utworzenia:
 							<br />
 							{created}
 						</p>
 						<p className='form__updated'>
-							Updated:
+							Data ostatniej zmiany:
 							<br />
 							{updated}
 						</p>

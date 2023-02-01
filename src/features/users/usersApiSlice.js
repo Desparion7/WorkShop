@@ -12,7 +12,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 			query: () => ({
 				url: '/users',
 				validateStatus: (response, result) => {
-					return (response.status = 200 && !result.isError);
+					return (response.status === 200 && !result.isError);
 				},
 			}),
 			keepUnusedDataFor: 5,

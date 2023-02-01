@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { useAddNewNoteMutation } from './notesApiSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSave } from '@fortawesome/free-solid-svg-icons';
-
+import useTitle from '../../hooks/useTitle';
 
 const NewNoteForm = ({ users }) => {
+	useTitle('Nowe zadanie');
 	const [addNewNote, { isLoading, isSuccess, isError, error }] =
 		useAddNewNoteMutation();
 
