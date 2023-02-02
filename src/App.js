@@ -23,7 +23,7 @@ function App() {
 			<Route path='/WorkShop_frontend' element={<Layout />}>
 				{/* Public routes */}
 				<Route index element={<Public />} />
-				<Route path='/WorkShop_frontend/login' element={<Login />} />
+				<Route path='/login' element={<Login />} />
 				{/* Protected routes */}
 				<Route element={<PersistLogin />}>
 					<Route
@@ -37,17 +37,17 @@ function App() {
 										<RequireAuth allowedRoles={[ROLES.Admin, ROLES.Manager]} />
 									}
 								>
-									<Route path='/WorkShop_frontend/users'>
+									<Route path='/users'>
 										<Route index element={<UsersList />} />
-										<Route path='/WorkShop_frontend/:id' element={<EditUser />} />
-										<Route path='/WorkShop_frontend/new' element={<NewUserForm />} />
+										<Route path='/:id' element={<EditUser />} />
+										<Route path='/new' element={<NewUserForm />} />
 									</Route>
 								</Route>
 
-								<Route path='/WorkShop_frontend/notes'>
+								<Route path='/notes'>
 									<Route index element={<NotesList />} />
-									<Route path='/WorkShop_frontend/:id' element={<EditNote />} />
-									<Route path='/WorkShop_frontend/new' element={<NewNote />} />
+									<Route path='/:id' element={<EditNote />} />
+									<Route path='/new' element={<NewNote />} />
 								</Route>
 							</Route>{' '}
 						</Route>{' '}
