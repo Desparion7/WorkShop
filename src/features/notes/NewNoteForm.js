@@ -21,7 +21,7 @@ const NewNoteForm = ({ users }) => {
 			setUser('');
 			setTitle('');
 			setText('');
-			navigate(`/dash/notes`);
+			navigate(`/WorkShop_frontend/dash/notes`);
 		}
 	}, [isSuccess, navigate]);
 

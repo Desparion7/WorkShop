@@ -28,7 +28,7 @@ const EditNoteForm = ({ note, users }) => {
 			setTitle('');
 			setText('');
 			setUserId('');
-			navigate(`/dash/notes`);
+			navigate(`/WorkShop_frontend/dash/notes`);
 		}
 	}, [isSuccess, isDelSuccess, navigate]);
 

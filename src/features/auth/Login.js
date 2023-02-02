@@ -43,7 +43,7 @@ const Login = () => {
 			dispatch(setCredentials({ accessToken }));
 			setUsername('');
 			setPassword('');
-			navigate(`/dash`);
+			navigate(`/WorkShop_frontend/dash`);
 		} catch (err) {
 			if (!err.status) {
 				setErrMsg('Brak odpowiedzi servera');
@@ -106,7 +106,7 @@ const Login = () => {
 				</form>
 			</main>
 			<footer>
-				<Link to={`/`}>Strona główna</Link>
+				<Link to={`/WorkShop_frontend`}>Strona główna</Link>
 			</footer>
 		</section>
 	);

@@ -26,7 +26,7 @@ const Public = () => {
 				</address>
 			</main>
 			<footer>
-				<Link to='/login'>Centrum logowania</Link>
+				<Link to='/WorkShop_frontend/login'>Przejdz do centrum logowania</Link>
 			</footer>
 		</section>
 	);

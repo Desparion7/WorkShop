@@ -55,7 +55,7 @@ const PersistLogin = () => {
 		content = (
 			<p className='errmsg'>
 				{`${error?.data?.message} - `}
-				<Link to='/login'>Musisz się zalogować</Link>.
+				<Link to='/WorkShop_frontend/login'>Musisz się zalogować</Link>.
 			</p>
 		);
 	} else if (isSuccess && trueSuccess) {

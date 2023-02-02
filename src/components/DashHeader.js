@@ -26,13 +26,13 @@ const DashHeader = () => {
 		useSendLogoutMutation();
 
 	useEffect(() => {
-		if (isSuccess) navigate(`/`);
+		if (isSuccess) navigate(`/WorkShop_frontend/`);
 	}, [isSuccess, navigate]);
 
-	const onNewNoteClicked = () => navigate(`/dash/notes/new`);
-	const onNewUserClicked = () => navigate(`/dash/users/new`);
-	const onNotesClicked = () => navigate(`/dash/notes`);
-	const onUserClicked = () => navigate(`/dash/users`);
+	const onNewNoteClicked = () => navigate(`/WorkShop_frontend/dash/notes/new`);
+	const onNewUserClicked = () => navigate(`/WorkShop_frontend/dash/users/new`);
+	const onNotesClicked = () => navigate(`/WorkShop_frontend/dash/notes`);
+	const onUserClicked = () => navigate(`/WorkShop_frontend/dash/users`);
 
 	let dashClass = null;
 
@@ -119,7 +119,7 @@ const DashHeader = () => {
 			<p className={errClass}>{error?.data?.message}</p>
 			<header className='dash-header'>
 				<div className={`dash-header__container ${dashClass}`}>
-					<Link to='/dash'>
+					<Link to='/WorkShop_frontend/dash'>
 						<h1 className='dash-header__title'>CarWoś</h1>
 					</Link>
 					<nav className='dash-header__nav'>{buttonContent}</nav>

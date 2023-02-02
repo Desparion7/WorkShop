@@ -35,7 +35,7 @@ export const NewUserForm = () => {
 			setUsername('');
 			setPassword('');
 			setRoles([]);
-			navigate(`/dash/users`);
+			navigate(`/WorkShop_frontend/dash/users`);
 		}
 	}, [isSuccess, navigate]);
 

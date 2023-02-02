@@ -10,12 +10,12 @@ const DashFooter = () => {
 	const { pathname } = useLocation();
 
 	const onGoHomeHandler = () => {
-		navigate('/dash');
+		navigate('/WorkShop_frontend/dash');
 	};
 
 	let goHomeButton = null;
 
-	if (pathname !== '/dash') {
+	if (pathname !== '/WorkShop_frontend/dash') {
 		goHomeButton = (
 			<button
 				className='dash-footer__button icon-button'

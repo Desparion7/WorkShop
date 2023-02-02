@@ -22,7 +22,7 @@ const Note = ({ noteId }) => {
 			day: 'numeric',
 			month: 'long',
 		});
-		const handleEdit = () => navigate(`/dash/notes/${noteId}`);
+		const handleEdit = () => navigate(`/WorkShop_frontend/dash/notes/${noteId}`);
 		return (
 			<tr className='table__row'>
 				<td className='table__cell note__status'>
