@@ -5,5 +5,5 @@ MongoDB. Frontend deployed on github Backend on Cyclic.sh.
 
 Access to page like a admin:
 
-Email:Mateusz
-Password: 1234$
+# Login:Mateusz
+# Password: 1234$
