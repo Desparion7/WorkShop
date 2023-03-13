@@ -36,10 +36,15 @@ const Login = () => {
 		setPersist((prev) => !prev);
 	};
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+	const handleSubmit = async (name, pass, e) => {
+		if (e) {
+			e.preventDefault();
+		}
 		try {
-			const { accessToken } = await login({ username, password }).unwrap();
+			const { accessToken } = await login({
+				username: name,
+				password: pass,
+			}).unwrap();
 			dispatch(setCredentials({ accessToken }));
 			setUsername('');
 			setPassword('');
@@ -71,7 +76,12 @@ const Login = () => {
 				<p ref={errRef} className={errClass} aria-live='assertive'>
 					{errMsg}
 				</p>
-				<form className='form' onSubmit={handleSubmit}>
+				<form
+					className='form'
+					onSubmit={() => {
+						handleSubmit(username, password);
+					}}
+				>
 					<label htmlFor='username'>Nazwa użytkownika</label>
 					<input
 						className='form__input'
@@ -93,6 +103,15 @@ const Login = () => {
 						required
 					/>
 					<button className='form__submit-button'>Zaloguj się</button>
+					<button
+						className='form__submit-button'
+						type='button'
+						onClick={() => {
+							handleSubmit('Mateusz', '1234$');
+						}}
+					>
+						Demo
+					</button>
 					<label htmlFor='persist' className='form__persist'>
 						Dodaj uządzenie do zaufanych
 					</label>

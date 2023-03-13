@@ -1,6 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { setCredentials } from '../../features/auth/authSlice'
 
+// 'http://local-host:5000'
+// 'https://dead-toad-frock.cyclic.app'
+
 const baseQuery = fetchBaseQuery({
     baseUrl: 'https://dead-toad-frock.cyclic.app',
     credentials: 'include',

@@ -50,6 +50,8 @@
 	color: var(--COLOR);
 	display: grid;
 	place-content: center;
+	cursor: pointer;
+	transition: transform 0.3s;
 }
 
 .icon-button:hover,
@@ -109,8 +111,11 @@ a:focus-visible {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
+	transition: text-decoration 0.3s;
 }
-
+.welcome a:hover {
+	text-decoration: underline;
+}
 .public {
 	padding: 1em;
 	flex-grow: 1;
@@ -285,8 +290,11 @@ tr {
 .form__submit-button {
 	padding: 0.5em;
 	border-radius: 15px;
+	transition: background 0.3s;
 }
-
+.form__submit-button:hover {
+	background: rgb(202, 202, 202);
+}
 .form__input--text {
 	min-height: 150px;
 }
